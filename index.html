@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var message = "";
+        var answer = 5;
+        var counter = 1;
+        var flag = false;
+
+        // Loop
+        do {
+            var input1 = prompt('Guess The Number Of 1 To 10');
+            input1 = parseInt(input1);
+            if (input1 != answer) {
+                alert("Nope - Worng Answer!");
+            } else {
+                flag = true;
+                break;
+            }
+
+            if (counter == 3) {
+                break;
+            }
+            counter++;
+        } while (answer != input1);
+        if (flag) {
+            message += "Your Guessed it Right " + answer + " Is The Answer.";
+        } else {
+            message += "Sorry Batter Luck Next Time";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Guessed The Number</h1>
+    <script type="text/javascript">
+        document.write(message);
+    </script>
+</body>
+
+</html>
